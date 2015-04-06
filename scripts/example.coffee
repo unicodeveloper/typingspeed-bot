@@ -19,6 +19,10 @@ module.exports = (robot) ->
        msg.reply "I'm afraid I can't let you do that."
      else
        msg.reply "Opening #{doorType} doors"
+   
+   robot.respond /ready\s*(.*)?$/i, (res) ->
+    res.reply "That means nothing to me anymore. Perhaps you meant `docs` instead?"
+    return
   
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
