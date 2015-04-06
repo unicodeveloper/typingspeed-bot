@@ -25,8 +25,9 @@ module.exports = (robot) ->
     return
   
 
-    robot.respond /annoy me/i, (res) ->
-     res.send "Hey, want to hear the most annoying sound in the world?"
+   robot.respond /annoy me/i, (res) ->
+    res.reply "let me make you happy"
+    res.send "Hey, want to hear the most annoying sound in the world?"
  #     setInterval () ->
  #     res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
  #    , 1000
