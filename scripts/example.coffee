@@ -26,10 +26,10 @@ module.exports = (robot) ->
   
 
     robot.respond /annoy me/i, (res) ->
-    res.send "Hey, want to hear the most annoying sound in the world?"
-    setInterval () ->
+     res.send "Hey, want to hear the most annoying sound in the world?"
+     setInterval () ->
       res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
-    , 1000
+     , 1000
 
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
