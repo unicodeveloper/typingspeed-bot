@@ -12,7 +12,6 @@ moment = require 'moment'
 module.exports = (robot) ->
 
    robot.hear /akowa/i, (msg) ->
-    robot.on "onkeydown" , (msg)->
        msg.reply "You are typing"
 
    robot.hear /badger/i, (msg) ->
