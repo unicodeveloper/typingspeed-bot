@@ -34,9 +34,9 @@ module.exports = (robot) ->
 
      msg.reply msg.random typingWords 
 
-    robot.respond /\s*(.*)?$/i, (res)->
-        res.reply  "You started typing at #{now}"
-        return
+   robot.respond /\s*(.*)?$/i, (res)->
+     res.reply  "You started typing at #{now}"
+        #return
   
 
    robot.respond /annoy me/i, (res) ->
