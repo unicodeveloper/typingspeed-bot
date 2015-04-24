@@ -33,6 +33,7 @@ module.exports = (robot) ->
     setInterval () ->
       res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
     , 6
+    return
 
    robot.respond /stop typing/i (res) ->
     res.send "I have stopped typing"
