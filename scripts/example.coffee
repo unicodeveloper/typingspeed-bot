@@ -21,6 +21,7 @@ module.exports = (robot) ->
        msg.reply "Opening #{doorType} doors"
    
    robot.respond /ready\s*(.*)?$/i, (res) ->
+    res.reply new Date
     res.reply "You seem ready to take on the typing test. Your timer starts immediately you receive the typing text. Slack me `yes` if you want to continue"
     robot.respond /yes/i, (msg) ->
 
