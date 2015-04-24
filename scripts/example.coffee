@@ -34,8 +34,8 @@ module.exports = (robot) ->
       res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
     , 6
 
-   robot.respond /stop typing/i (msg) ->
-    msg.send "I have stopped typing"
+   robot.respond /stop typing/i (res) ->
+    res.send "I have stopped typing"
 
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
