@@ -13,7 +13,7 @@ module.exports = (robot) ->
 
    robot.hear /akowa/i, (msg) ->     
      robot.on "onkeydown", (msg)-> 
-      msg.send( msg.message.user.name)
+      msg.send "common GUYS"
 
    robot.hear /badger/i, (msg) ->
      msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
@@ -48,9 +48,6 @@ module.exports = (robot) ->
     setInterval () ->
       res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
     , 6
-    robot.on "user_typing", ()->
-      res.send "User is typing"
-      
 
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
