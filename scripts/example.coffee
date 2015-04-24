@@ -7,6 +7,7 @@
 #   Uncomment the ones you want to try and experiment with.
 #
 ####   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
+moment = require 'moment'
 
 module.exports = (robot) ->
 
@@ -21,10 +22,9 @@ module.exports = (robot) ->
        msg.reply "Opening #{doorType} doors"
    
    robot.respond /ready\s*(.*)?$/i, (res) ->
-    res.reply new Date
     res.reply "You seem ready to take on the typing test. Your timer starts immediately you receive the typing text. Slack me `yes` if you want to continue"
     robot.respond /yes/i, (msg) ->
-
+      
      typingWords = [
       "this is a simple paragraph that is meant to be nice and easy to type which is why there will be mommas no periods or any capital letters so i guess this means that it cannot really be considered a paragraph but just a series of run on sentences this should help you get faster at typing as im trying not to use too many difficult words in it although i think that i might start making it hard by including some more difficult letters I'm typing pretty quickly so forgive me for any mistakes i think that i will not just tell you a story about the time i went to the zoo and found",
       "Peter Parker is the parking man under the parking Bus for electrocuting the minute individuals",
@@ -33,6 +33,9 @@ module.exports = (robot) ->
      ]
 
      msg.reply msg.random typingWords 
+
+    robot.on "user_typing", ()->
+        res.reply  "You started typing at #{now}"
     return
   
 
