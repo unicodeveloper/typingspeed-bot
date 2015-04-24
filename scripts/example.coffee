@@ -9,6 +9,7 @@
 ####   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 moment = require 'moment'
 
+
 module.exports = (robot) ->
 
    robot.hear /akowa/i, (msg) -> 
@@ -17,6 +18,9 @@ module.exports = (robot) ->
 
    robot.hear /badger/i, (msg) ->
      msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+
+   robot.on 'user_typing', (event) ->
+    robot.send event.user
   
    robot.respond /open the (.*) doors/i, (msg) ->
      doorType = msg.match[1]
