@@ -12,7 +12,7 @@ moment = require 'moment'
 module.exports = (robot) ->
 
    robot.hear /akowa/i, (msg) ->     
-     if robot.on "onkeydown" 
+     robot.on "onkeydown", (msg)-> 
       msg.send( msg.message.user.name)
 
    robot.hear /badger/i, (msg) ->
