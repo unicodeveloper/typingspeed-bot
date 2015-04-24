@@ -33,10 +33,11 @@ module.exports = (robot) ->
      ]
 
      msg.reply msg.random typingWords 
+    return  
 
-   robot.respond /\s*(.*)?$/i, (res)->
-     res.reply  "You started typing at #{now}"
-        #return
+   # robot.respond /\s*(.*)?$/i, (res)->
+   #   res.reply  "You started typing at #{now}"
+   #      #return
   
 
    robot.respond /annoy me/i, (res) ->
@@ -45,6 +46,9 @@ module.exports = (robot) ->
     setInterval () ->
       res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
     , 6
+    robot.emit "user_typing", ()->
+      res.send "User is typing"
+      
 
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
