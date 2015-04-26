@@ -42,8 +42,8 @@ module.exports = (robot) ->
       speed = Math.floor((results.hits / duration) * 60)
       response = "It took you #{duration} seconds to type the paragraph.
                  You had typed #{results.misses} words wrong or ommitted them;
-                 You also typed #{results.extras} extra words;
-                 You typed #{results.hits} words correctly;
+                 You also typed #{results.extras} extra words.
+                 You typed #{results.hits} words correctly.
                  Your typing speed is #{speed} words per minute"
       msg.reply utils.sanitizeSpaces response
 
