@@ -12,22 +12,22 @@ moment = require 'moment'
 
 module.exports = (robot) ->
 
-   robot.hear /akowa/i, (msg) -> 
-       msg.reply "You are typing"    
+   robot.hear /akowa/i, (msg) ->
+       msg.reply "You are typing"
 
    robot.hear /badger/i, (msg) ->
      msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
 
    robot.on 'user_typing', (event) ->
     robot.send event.user
-  
+
    robot.respond /open the (.*) doors/i, (msg) ->
      doorType = msg.match[1]
      if doorType is "pod bay"
        msg.reply "I'm afraid I can't let you do that."
      else
        msg.reply "Opening #{doorType} doors"
-   
+
    robot.respond /ready\s*(.*)?$/i, (res) ->
     res.reply "You seem ready to take on the typing test. Your timer starts immediately you receive the typing text. Slack me `yes` if you want to continue"
     robot.respond /yes/i, (msg) ->
@@ -37,14 +37,14 @@ module.exports = (robot) ->
       "Peter Parker is the parking man under the parking Bus for electrocuting the minute individuals",
       "Andela is a global talent accelerator, it provides opportunites for bright minds across Africa",
       "Pipe the piper has nothing to offer under the sun until you are done typing this",
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
      ]
 
-     msg.reply msg.random typingWords 
+     msg.reply msg.random typingWords
      msg.robot.emit "user_typing", (msg)->
        msg.reply "You started typing"
-    
+
 
 
    robot.respond /annoy me/i, (res) ->
