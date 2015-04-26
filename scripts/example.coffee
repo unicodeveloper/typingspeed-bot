@@ -15,19 +15,19 @@ sessions = require './sessions'
 
 module.exports = (robot) ->
 
-  robot.hear /typing/i, (msg) ->
+  robot.respond /typing/i, (msg) ->
     msg.send "Hello friend :grin: would you like to upgrade your typing speed? A timer starts immediately you receive a paragraph.
-              You must start by typing 'begin ' before your paragraph so I can detect your response.Enter 'ready' to get a random paragraph!
+              You must start by typing 'begin ' before your paragraph so I can detect your response. Enter 'ready' to get a random paragraph!
               "
 
-  robot.hear /ready/i, (msg) ->
+  robot.respond /ready/i, (msg) ->
     # create a new session with msg.message.user.name
     paragraph_index = Math.floor(Math.random() * paragraphs.length)
     newSession = sessions.createSession msg.message.user.name, paragraph_index, robot.brain
 
     msg.send paragraphs[paragraph_index]
 
-    robot.hear /begin/i, (msg) ->
+    robot.respond /begin/i, (msg) ->
       slack_id = msg.message.user.name
       end_time = moment().unix()
       session = sessions.getSession slack_id, robot.brain
