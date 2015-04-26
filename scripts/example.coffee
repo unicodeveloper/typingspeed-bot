@@ -13,7 +13,6 @@ moment = require 'moment'
 module.exports = (robot) ->
 
    robot.hear /akowa/i, (msg) -> 
-    robot.on "user_typing" , (msg)->
        msg.reply "You are typing"    
 
    robot.hear /badger/i, (msg) ->
@@ -37,7 +36,9 @@ module.exports = (robot) ->
       "this is a simple paragraph that is meant to be nice and easy to type which is why there will be mommas no periods or any capital letters so i guess this means that it cannot really be considered a paragraph but just a series of run on sentences this should help you get faster at typing as im trying not to use too many difficult words in it although i think that i might start making it hard by including some more difficult letters I'm typing pretty quickly so forgive me for any mistakes i think that i will not just tell you a story about the time i went to the zoo and found",
       "Peter Parker is the parking man under the parking Bus for electrocuting the minute individuals",
       "Andela is a global talent accelerator, it provides opportunites for bright minds across Africa",
-      "Pipe the piper has nothing to offer under the sun until you are done typing this"
+      "Pipe the piper has nothing to offer under the sun until you are done typing this",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
      ]
 
      msg.reply msg.random typingWords 
