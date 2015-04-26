@@ -21,8 +21,8 @@ module.exports = (robot) ->
   robot.respond /typing/i, (msg) ->
     response = "Hello friend :grin: would you like to upgrade your typing speed?
                 A timer starts immediately you receive a paragraph.
-                You must start by typing 'begin ' before your paragraph so I can detect your response.
-                Enter 'ready' to get a random paragraph!
+                You must start by typing `begin` before your paragraph so I can detect your response.
+                Enter `ready` to get a random paragraph!
               "
     msg.send utils.sanitizeSpaces response
 
