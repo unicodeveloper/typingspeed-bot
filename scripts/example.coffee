@@ -42,8 +42,8 @@ module.exports = (robot) ->
       if duration <= 10
         response = "It took you #{duration} seconds to type the paragraph.
                      You had typed #{results.misses} words wrong or ommitted them.
-                     99% probability you `cheated` or `copied and pasted`. These are the signs of a `thief`,
-                     a `scammer` and we don't breed these kinda persons in `Andela`.
+                     `99% probability you cheated or copied and pasted. These are the signs of a thief,
+                     a scammer and we don't breed these kinda persons in Andela`.
                      Please try again but honestly this time around."
       else
         response = "It took you #{duration} seconds to type the paragraph.
