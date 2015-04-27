@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.respond /typing/i, (msg) ->
     response = "Hello friend :grin: would you like to upgrade your typing speed?
                 A timer starts immediately you receive a paragraph.
-                Enter `helpme` to know more about how to operate typingspeedbot.
+                Enter `help` to know more about how to operate typingspeedbot.
                 Enter `ready` to get a random paragraph!"
     msg.send utils.sanitizeSpaces response
 
@@ -39,10 +39,17 @@ module.exports = (robot) ->
       results  = compare.compareOccurences paragraphs[session.paragraph_index], msg.message.text
       duration = end_time - session.start_time
       speed    = Math.floor((results.hits / duration) * 60)
-      response = "It took you #{duration} seconds to type the paragraph.
-                 You had typed #{results.misses} words wrong or ommitted them.
-                 You typed #{results.hits} word(s) correctly.
-                 Your typing speed is #{speed} word(s) per minute"
+      if duration <= 10
+        response = "It took you #{duration} seconds to type the paragraph.
+                     You had typed #{results.misses} words wrong or ommitted them.
+                     99% probability you `cheated` or `copied and pasted`. These are the signs of a `thief`,
+                     a `scammer` and we don't breed these kinda persons in `Andela`.
+                     Please try again but honestly this time around."
+      else
+        response = "It took you #{duration} seconds to type the paragraph.
+                     You had typed #{results.misses} words wrong or ommitted them.
+                     You typed #{results.hits} word(s) correctly.
+                     Your typing speed is #{speed} word(s) per minute"
       msg.reply utils.sanitizeSpaces response
 
   #Spills out custome typingspeed bot help commands
