@@ -1,5 +1,5 @@
 module.exports = [
-  "begin This is easy. You never have to figure out what to get for children,\
+  "Begin This is easy. You never have to figure out what to get for children,\
   because they will tell you exactly what they want.\
   They spend months and months researching these kinds of things by watching\
   Saturday-morning cartoon-show advertisements.\
@@ -11,19 +11,19 @@ module.exports = [
   but believe me, you have not seen antisocial tendencies until you've seen a child who is \
   convinced that he or she did not get the right gift.",
 
-  "begin I think that all good, right thinking people in this country are sick and tired of being told that all good, \
+  "Begin I think that all good, right thinking people in this country are sick and tired of being told that all good, \
   right thinking people in this country are fed up with being told that all good, \
   right thinking people in this country are fed up with being sick and tired.\
   I'm certainly not, and I'm sick and tired of being told that I am.",
 
-  "begin As you reach for the web, a venomous spider appears. Unable to pull your hand away in time, the spider promptly, \
+  "Begin As you reach for the web, a venomous spider appears. Unable to pull your hand away in time, the spider promptly, \
   but politely, bites you. The venom takes effect quickly causing your lips to turn plaid along with your complexion.\
   You become dazed, and in your stupor you fall from the limbs of the tree. \
   Snap! Your head falls off and rolls all over the ground. The instant before you croak, \
   you hear the whoosh of a vacuum being filled by the air surrounding your head. \
   Worse yet, the spider is suing you for damages.",
 
-  "begin After Benjamin Franklin came a herd of Electrical Pioneers whose names have become part of our electrical terminology: \
+  "Begin After Benjamin Franklin came a herd of Electrical Pioneers whose names have become part of our electrical terminology: \
   Myron Volt, Mary Louise Amp, James Watt, Bob Transformer, etc. \
   These pioneers conducted many important electrical experiments. \
   For example, in 1780 Luigi Galvani discovered (this is the truth) \
@@ -34,7 +34,7 @@ module.exports = [
   implant pieces of metal in its muscles, and watch it hop back into the pond just like a normal frog, \
   except for the fact that it sinks like a stone.",
 
-  "begin When any principle, law, tenet, probability, happening, circumstance, or result can in no way be directly, \
+  "Begin When any principle, law, tenet, probability, happening, circumstance, or result can in no way be directly, \
   indirectly, empirically, or circuitously proven, derived, implied, \
   inferred, induced, deducted, estimated, or scientifically guessed, \
   it will always for the purpose of convenience, expediency, political advantage, material gain, \

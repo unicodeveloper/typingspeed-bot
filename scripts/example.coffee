@@ -6,14 +6,15 @@ compare     = require './compare'
 moment      = require 'moment'
 paragraphs  = require './paragraphs'
 sessions    = require './sessions'
-utils       = require './utils'
+utils       = require './utils',
+help        = require './help'
 
 module.exports = (robot) ->
 
   robot.respond /typing/i, (msg) ->
     response = "Hello friend :grin: would you like to upgrade your typing speed?
                 A timer starts immediately you receive a paragraph.
-                You must start by typing `begin` before your paragraph so I can detect your response.
+                Enter `helpme` to know more about how to operate typingspeedbot.
                 Enter `ready` to get a random paragraph!"
     msg.send utils.sanitizeSpaces response
 
@@ -23,7 +24,6 @@ module.exports = (robot) ->
     response = paragraphs[paragraph_index]
     msg.send utils.sanitizeSpaces response
     response = ""
-
 
   #listen until the user types 'begin'
   robot.respond /begin/i, (msg) ->
@@ -45,3 +45,8 @@ module.exports = (robot) ->
                  Your typing speed is #{speed} word(s) per minute"
       msg.reply utils.sanitizeSpaces response
 
+  #Spills out custome typingspeed bot help commands
+  robot.respond /help/i, (msg) ->
+
+    emit = help.join "\n"
+    msg.send emit

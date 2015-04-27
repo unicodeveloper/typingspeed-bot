@@ -15,5 +15,5 @@ deleteSession = (slack_id, brain) ->
 
 module.exports = {
   createSession: createSession,
-  getSession: getSession
+  getSession:    getSession
 }
