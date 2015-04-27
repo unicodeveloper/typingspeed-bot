@@ -39,7 +39,7 @@ module.exports = (robot) ->
       results  = compare.compareOccurences paragraphs[session.paragraph_index], msg.message.text
       duration = end_time - session.start_time
       speed    = Math.floor((results.hits / duration) * 60)
-      if duration <= 10
+      if duration <= 25
         response = "It took you #{duration} seconds to type the paragraph.
                      You had typed #{results.misses} words wrong or ommitted them.
                      `99% probability you cheated or copied and pasted. These are the signs of a thief,
