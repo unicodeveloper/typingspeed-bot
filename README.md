@@ -44,8 +44,10 @@ from `external-scripts.json` and you don't need to worry about redis at all.
 
 ## Deployment
 
-    % heroku create --stack cedar
+    % heroku create <app-name>
     % git push heroku master
+
+Check out this [tutorial](http://goodheads.io/2015/10/30/creating-your-first-slack-bot/#time-to-deploy) to learn how to deploy a slackbot on heroku
 
 If your Heroku account has been verified you can run the following to enable
 and add the Redis to Go addon to your app.
