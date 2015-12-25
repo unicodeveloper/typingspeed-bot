@@ -1,9 +1,9 @@
 {
-  "name": "InShape",
-  "version": "0.0.0",
+  "name": "typingspeed-bot",
+  "version": "1.0.0",
   "private": true,
-  "author": "y",
-  "description": "Asks you core, recent and trending questions in software development and also supplies you with links to highly informative learning resources.",
+  "author": "unicodeveloper",
+  "description": "A bot that helps to increase your typing speed by testing how fast you type on slack",
   "dependencies": {
     "hubot": "^2.11.4",
     "hubot-diagnostics": "0.0.1",

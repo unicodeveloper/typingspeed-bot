@@ -1,7 +1,3 @@
-#   Typingspeed Bot
-#   Crafted at Andela
-#   Integrated with Slack
-#
 compare     = require './compare'
 moment      = require 'moment'
 paragraphs  = require './paragraphs'
