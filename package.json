@@ -1,7 +1,6 @@
 {
   "name": "typingspeed-bot",
   "version": "1.0.0",
-  "private": true,
   "author": "unicodeveloper",
   "description": "A bot that helps to increase your typing speed by testing how fast you type on slack",
   "dependencies": {
